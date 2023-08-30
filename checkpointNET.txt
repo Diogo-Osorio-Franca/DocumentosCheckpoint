@@ -1,0 +1,21 @@
+1 - colocar 4 roteadores Router Pt--Empty
+2-conectar formando um anel
+3-configurar cada porta gig com endereço IP e máscara
+4- ligar um switch em um dos roteadores(interface giga)
+5-configurar endereço IP da interface gig do switch
+6-conectar um servidor e Pcs no switch
+8- no roteador
+enable
+configure terminal
+ip dhcp pool lan1
+default-route 205.205.205.1
+network 205.205.205.0 255.255.255.0
+DNS-server 205.205.205.2(IP do servidor)
+9-no servidor, configurar IP igual o DNS, com gateway igual a default-route
+10- no servidor, em service http, modificar a página index.html
+11- no servidor em serviços, ligar o DNS e criar uma página.
+12- ligar DHCP nos computadores
+13- repetir o passo 4 em outro roteador sem servidor, configurar gateway no switch
+14- configurar IP do PC,gateway e DNS do servidor.
+15- configurar roteamento RIP entre os roteadores botando os IPs de suas interfaces gig e o dns do servidor
+16- acessar a página no PC da LAN2
